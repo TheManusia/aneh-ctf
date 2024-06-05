@@ -1,0 +1,13 @@
+version: "2"
+services:
+    www:
+        build: .
+        ports: 
+            - "8004:80"
+        volumes:
+            - ./www:/var/www/html/
+            - ./flag:/flag/
+        networks:
+            - default
+volumes:
+    persistent:
